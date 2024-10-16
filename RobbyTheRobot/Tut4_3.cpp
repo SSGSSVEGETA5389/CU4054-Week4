@@ -1,6 +1,6 @@
 //#include <iostream>
 //#include "GraphicsManager.h"	
-
+//
 ////Ignore this!!
 //Room* room;
 //Robot* robby;
@@ -10,7 +10,7 @@
 //int main()
 //{
 //	//declare the room, robby and picture objects here
-//	room = new Room(4);
+//	room = new Room(5);
 //	robby = new Robot();
 //	picture = new GraphicsManager(room, robby);
 //
@@ -22,10 +22,15 @@
 //			robby->move();
 //			picture->draw();
 //		}
-//		else if (robby->ahead_is_colour(room, "white"))
+//		else if (robby->ahead_is_colour(room, "white") || robby->ahead_is_colour(room, "black"))
 //		{
 //			robby->right();
 //			picture->draw();
+//			if (robby->ahead_is_colour(room, "white"))
+//			{
+//				robby->left(); //Checks twice to see if there is a white block, if there is, will turn twice and keep on moving.
+//				robby->left();
+//			}
 //
 //		}
 //
@@ -38,6 +43,7 @@
 //
 //		}
 //	}
+//
 //	//we need system pause so that we can see where robby ends up
 //	system("Pause");
 //}
